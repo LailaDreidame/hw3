@@ -12,45 +12,45 @@
        TASK 1 — the header. Make this a flex row:
        title on the left, the three links together on the right.
        ============================================================ -->
-  <header class="">
-    <h1 class="">My Course Page</h1>
-    <nav class="">
-      <a href="#" class="">Home</a>
-      <a href="#" class="">Projects</a>
-      <a href="#" class="">About</a>
+  <header class="flex items-center justify-between bg-slate-900 px-6 py-4 text-white">
+    <h1 class="text-2xl font-bold">My Course Page</h1>
+    <nav class="flex flex-1 justify-end gap-4">
+      <a href="#" class="font-medium hover:underline">Home</a>
+      <a href="#" class="font-medium hover:underline">Projects</a>
+      <a href="#" class="font-medium hover:underline">About</a>
     </nav>
   </header>
 
-  <main class="">
+  <main class="p-6">
 
     <!-- ==========================================================
          TASK 2 — the card grid. Make this a grid.
          One column on a phone, two at md, three at lg.
          ========================================================== -->
-    <section id="cards" class="">
-      <div class="">
-        <h2 class="">Card One</h2>
-        <p class="">A short line of text so the card has something in it.</p>
+    <section id="cards" class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <div class="rounded-lg bg-white p-6 shadow">
+        <h2 class="mb-2 text-xl font-semibold">Card One</h2>
+        <p class="text-slate-700">A short line of text so the card has something in it.</p>
       </div>
-      <div class="">
-        <h2 class="">Card Two</h2>
-        <p class="">A short line of text so the card has something in it.</p>
+      <div class="rounded-lg bg-white p-6 shadow">
+        <h2 class="mb-2 text-xl font-semibold">Card Two</h2>
+        <p class="text-slate-700">A short line of text so the card has something in it.</p>
       </div>
-      <div class="">
-        <h2 class="">Card Three</h2>
-        <p class="">A short line of text so the card has something in it.</p>
+      <div class="rounded-lg bg-white p-6 shadow">
+        <h2 class="mb-2 text-xl font-semibold">Card Three</h2>
+        <p class="text-slate-700">A short line of text so the card has something in it.</p>
       </div>
-      <div class="">
-        <h2 class="">Card Four</h2>
-        <p class="">A short line of text so the card has something in it.</p>
+      <div class="rounded-lg bg-white p-6 shadow">
+        <h2 class="mb-2 text-xl font-semibold">Card Four</h2>
+        <p class="text-slate-700">A short line of text so the card has something in it.</p>
       </div>
-      <div class="">
-        <h2 class="">Card Five</h2>
-        <p class="">A short line of text so the card has something in it.</p>
+      <div class="rounded-lg bg-white p-6 shadow">
+        <h2 class="mb-2 text-xl font-semibold">Card Five</h2>
+        <p class="text-slate-700">A short line of text so the card has something in it.</p>
       </div>
-      <div class="">
-        <h2 class="">Card Six</h2>
-        <p class="">A short line of text so the card has something in it.</p>
+      <div class="rounded-lg bg-white p-6 shadow">
+        <h2 class="mb-2 text-xl font-semibold">Card Six</h2>
+        <p class="text-slate-700">A short line of text so the card has something in it.</p>
       </div>
     </section>
 
@@ -59,17 +59,17 @@
          stacked. At md and up it is two columns, with the sidebar
          one third the width of the article.
          ========================================================== -->
-    <section id="layout" class="">
-      <article class="">
-        <h2 class="">Main article</h2>
-        <p class="">
+    <section id="layout" class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
+      <article class="rounded-lg bg-white p-6 shadow md:col-span-2">
+        <h2 class="mb-2 text-2xl font-semibold">Main article</h2>
+        <p class="text-slate-700">
           On a phone this sits above the sidebar. On a wider screen it sits
           beside it and takes about two thirds of the width.
         </p>
       </article>
-      <aside class="">
-        <h2 class="">Sidebar</h2>
-        <p class="">The narrow column.</p>
+      <aside class="rounded-lg bg-slate-100 p-6 shadow">
+        <h2 class="mb-2 text-xl font-semibold">Sidebar</h2>
+        <p class="text-slate-700">The narrow column.</p>
       </aside>
     </section>
 
