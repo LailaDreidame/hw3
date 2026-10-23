@@ -40,7 +40,7 @@ function PantryCard({ name, count, onAdd }) {
     <CardContent><p>Quantity: {count}</p></CardContent>
     <CardFooter>
       {/* YOUR TURN (TODO 1): pass onAdd as this Button's onClick prop -- drill 9's idea. */}
-      <Button variant="secondary">Add one</Button>
+      <Button variant="secondary" onClick={onAdd}>Add one</Button>
     </CardFooter>
   </Card>;
 }
@@ -53,7 +53,7 @@ export function Drill11() {
       <label htmlFor="pantry-name">Product name</label>
       {/* YOUR TURN (TODO 2): connect value and onChange just like drill 10,
           and remove defaultValue -- an input takes one or the other, not both. */}
-      <Input id="pantry-name" defaultValue="Apples" />
+      <Input id="pantry-name" value={name} onChange={e => setName(e.target.value)} />
     </div>
     <PantryCard name={name} count={count} onAdd={() => setCount(c => c + 1)} />
   </div>;
