@@ -12,9 +12,9 @@
        TASK 1 — the header. Make this a flex row:
        title on the left, the three links together on the right.
        ============================================================ -->
-  <header class="flex items-center justify-between bg-slate-900 px-6 py-4 text-white">
+  <header class="flex flex-col items-center justify-between gap-2 bg-slate-900 px-6 py-4 text-white sm:flex-row">
     <h1 class="text-2xl font-bold">My Course Page</h1>
-    <nav class="flex flex-1 justify-end gap-4">
+    <nav class="flex gap-4">
       <a href="#" class="font-medium hover:underline">Home</a>
       <a href="#" class="font-medium hover:underline">Projects</a>
       <a href="#" class="font-medium hover:underline">About</a>
@@ -28,29 +28,35 @@
          One column on a phone, two at md, three at lg.
          ========================================================== -->
     <section id="cards" class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-      <div class="rounded-lg bg-white p-6 shadow">
+      <div class="flex flex-col rounded-lg bg-white p-6 shadow">
         <h2 class="mb-2 text-xl font-semibold">Card One</h2>
-        <p class="text-slate-700">A short line of text so the card has something in it.</p>
+        <p class="flex-1 text-slate-700">A short line of text so the card has something in it.</p>
+        <a href="#" class="mt-4 font-medium text-blue-700 hover:underline">Read more →</a>
       </div>
-      <div class="rounded-lg bg-white p-6 shadow">
+      <div class="flex flex-col rounded-lg bg-white p-6 shadow">
         <h2 class="mb-2 text-xl font-semibold">Card Two</h2>
-        <p class="text-slate-700">A short line of text so the card has something in it.</p>
+        <p class="flex-1 text-slate-700">This card has a longer description, so it runs onto a few more lines than the cards beside it and makes the whole row taller.</p>
+        <a href="#" class="mt-4 font-medium text-blue-700 hover:underline">Read more →</a>
       </div>
-      <div class="rounded-lg bg-white p-6 shadow">
+      <div class="flex flex-col rounded-lg bg-white p-6 shadow">
         <h2 class="mb-2 text-xl font-semibold">Card Three</h2>
-        <p class="text-slate-700">A short line of text so the card has something in it.</p>
+        <p class="flex-1 text-slate-700">A medium-length line of text, a little longer than the first.</p>
+        <a href="#" class="mt-4 font-medium text-blue-700 hover:underline">Read more →</a>
       </div>
-      <div class="rounded-lg bg-white p-6 shadow">
+      <div class="flex flex-col rounded-lg bg-white p-6 shadow">
         <h2 class="mb-2 text-xl font-semibold">Card Four</h2>
-        <p class="text-slate-700">A short line of text so the card has something in it.</p>
+        <p class="flex-1 text-slate-700">Short and sweet.</p>
+        <a href="#" class="mt-4 font-medium text-blue-700 hover:underline">Read more →</a>
       </div>
-      <div class="rounded-lg bg-white p-6 shadow">
+      <div class="flex flex-col rounded-lg bg-white p-6 shadow">
         <h2 class="mb-2 text-xl font-semibold">Card Five</h2>
-        <p class="text-slate-700">A short line of text so the card has something in it.</p>
+        <p class="flex-1 text-slate-700">Another card with a bit more to say. Its text wraps onto extra lines, so the shorter cards next to it have empty space to fill.</p>
+        <a href="#" class="mt-4 font-medium text-blue-700 hover:underline">Read more →</a>
       </div>
-      <div class="rounded-lg bg-white p-6 shadow">
+      <div class="flex flex-col rounded-lg bg-white p-6 shadow">
         <h2 class="mb-2 text-xl font-semibold">Card Six</h2>
-        <p class="text-slate-700">A short line of text so the card has something in it.</p>
+        <p class="flex-1 text-slate-700">A short line of text so the card has something in it.</p>
+        <a href="#" class="mt-4 font-medium text-blue-700 hover:underline">Read more →</a>
       </div>
     </section>
 

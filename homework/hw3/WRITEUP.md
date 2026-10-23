@@ -53,20 +53,20 @@ What was going on in it?
 Which class did you pick, and where in `index.html` did you use it?
 
 > Class: `flex-1`
-> Where: on the `<nav>` in the header
+> Where: on the `<p>` description inside each of the six cards in `#cards` (each card is now `flex flex-col` with a "Read more →" link at the bottom)
 
 What does it do, and what CSS does it compile to? (The docs page has both — the second
 one is in the table.)
 
-> `flex-1` tells a flex item to grow and take up any leftover space in the flex container. In Tailwind it compiles roughly to `flex: 1 1 0%;`, which means the nav item expands to fill the available width while still shrinking and growing as needed.
+> `flex-1` tells a flex item to grow and take up whatever space is left over in its flex container. It compiles to `flex: 1;`, which means grow 1, shrink 1, and start from a basis of 0, so the item absorbs all the leftover space.
 
 Why there? What would go wrong if you removed it?
 
-> I used it on the nav so the links stayed pinned to the right side while still letting the nav stretch within the header. If I removed it, the nav would no longer fill the remaining space naturally, and the right alignment would feel less intentional and less balanced.
+> The grid makes every card in a row the same height, but the cards have different amounts of text, so the shorter ones have empty space. With `flex-1` on the description, the paragraph soaks up that space and pushes the "Read more" link to the bottom, so the links line up across the row. If I remove it, each link sits right under its own text and the links end up at three different heights in the same row.
 
 Anything you tried first that did not work?
 
-> I first tried adding `justify-end` to the header itself, but that did not work as cleanly because it affected the entire header instead of just the navigation group. Switching to `flex-1` on the nav gave the correct layout and made the effect visible in the page.
+> First I put `flex-1` on the `<nav>` in the header. The test passed, but nothing visibly changed when I removed it: the header's `justify-between` was already pushing the links to the right, so `flex-1` only made the nav's invisible box wider. I moved it to the cards, where removing it visibly breaks the alignment.
 
 ---
 
@@ -81,5 +81,5 @@ say which one, what you asked it for, and what you did with the answer. If it ga
 something that did not work, say so — that is worth as much as a success. If you did not
 use one, write "No AI used."
 
-> I used GitHub Copilot to help interpret the assignment instructions and to check which Tailwind classes matched the required flexbox and grid behavior. I verified every suggestion against the course README and the browser test failures before using it in the final file.
+> I used GitHub Copilot to help interpret the assignment instructions and to check which Tailwind classes matched the required flexbox and grid behavior. I verified every suggestion against the course README and the browser test failures before using it in the final file. After grading feedback, I used Claude (Claude Code) to review my submission. It pointed out that removing my `flex-1` from the nav did not visibly change the page, and it helped me move it into the cards, stack the header on phones with `flex-col sm:flex-row`, rerun the tests, and retake the screenshots.
 
